@@ -6,8 +6,8 @@ It uses the [typer](https://github.com/tiangolo/typer) as the CLI and can be eas
 
 ### General Help
 ```text
-$> vcdibuildutils --help
-Usage: vcdibuildutils [OPTIONS] COMMAND [ARGS]...
+$> gdeploy --help
+Usage: gdeploy [OPTIONS] COMMAND [ARGS]...
 
 Options:
   --help  Show this message and exit.
@@ -20,8 +20,8 @@ Commands:
 
 ### Subcommand Help
 ```text
-$> vcdibuildutils functions --help
-Usage: vcdibuildutils functions [OPTIONS] COMMAND [ARGS]...
+$> gdeploy functions --help
+Usage: gdeploy functions [OPTIONS] COMMAND [ARGS]...
 
 Options:
   --help  Show this message and exit.
@@ -33,8 +33,8 @@ Commands:
 
 ### Detailed Help
 ```text
-$> vcdibuildutils functions deploy --help
-Usage: vcdibuildutils functions deploy [OPTIONS]
+$> gdeploy functions deploy --help
+Usage: gdeploy functions deploy [OPTIONS]
 
   Wrapper around `gcloud functions deploy`
 
@@ -59,15 +59,15 @@ $> # using environment variables
 $> export CONFIG_PATH=/path/to/config.jsonnet
 $> export SOURCE_PATH=/path/to/source
 
-$> vcdibuildutils functions deploy
+$> gdeploy functions deploy
 ```
 
 ```text
 $> # defaulting source to local `src` directory
-$> vcdibuildutils functions deploy --config /path/to/config.jsonnet
+$> gdeploy functions deploy --config /path/to/config.jsonnet
 
 $> # complete command line
-$> vcdibuildutils functions deploy --config /path/to/config.jsonnet --source /path/to/source
+$> gdeploy functions deploy --config /path/to/config.jsonnet --source /path/to/source
 ```
 
 #### Jsonnet configuration file:
